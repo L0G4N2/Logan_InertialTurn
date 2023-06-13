@@ -28,9 +28,9 @@ void driveForward() {
 int main() {
   //Initializing Robot Configuration. DO NOT REMOVE!
   vexcodeInit();
-  Inertial20.calibrate();
+  Inertial10.calibrate();
   //Waiting for the Inertial Sensor to calibrate
-  while (Inertial20.isCalibrating()) {
+  while (Inertial10.isCalibrating()) {
     wait(100, msec);
   }
   //Drive Forward and wait
@@ -40,8 +40,9 @@ int main() {
   LeftMotor.spin(forward);
   RightMotor.spin(reverse);
   //Wait until the motors reach a 90 degree turn then stop the motors
-  waitUntil((Inertial20.rotation(degrees) >= 90.0));
+  waitUntil((Inertial10.rotation(degrees) >= 90.0));
   LeftMotor.stop();
   RightMotor.stop();
   wait(1, seconds);
 }
+
