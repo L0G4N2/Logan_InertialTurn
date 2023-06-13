@@ -27,7 +27,6 @@ void driveForward() {
 //The main function
 int main() {
   //Initializing Robot Configuration. DO NOT REMOVE!
-  vexcodeInit();
   Inertial10.calibrate();
   //Waiting for the Inertial Sensor to calibrate
   while (Inertial10.isCalibrating()) {
